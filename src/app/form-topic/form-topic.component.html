@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col 12">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="topic">
+      Sujet:
+    </label>
+    <input type="text" class="form-control" id="topic" placeholder="Sujet" name="title" ngModel>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Texte</span>
+    </div>
+    <input type="text" class="form-control" aria-label="With textarea" name="text" ngModel>
+  </div>
+  <br>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="categories">Catégorie</label>
+    </div>
+    <select class="custom-select" id="categories"  name="category" ngModel>
+      <option selected>Choisir...</option>
+      <option value="environnement">environnement</option>
+      <option value="relationnel">relationnel</option>
+      <option value="cuisine">cuisine</option>
+      <option value="toilettes">toilettes</option>
+    </select>
+  </div>
+   <button class="btn" type="submit">Envoyer</button>
+</form>
+    </div>
+  </div>
+</div>
